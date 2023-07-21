@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-事件-案例</title>
+</head>
+<body>
+    <img id = "h1" src="https://img-blog.csdnimg.cn/20191013125600919.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc0Mzc5OQ==,size_16,color_FFFFFF,t_70" width="300" > <br><br>
+
+    <input type="button" value="点亮"  onclick="on1()">
+    <input type="button" value="熄灭" onclick="on2()">
+    
+    <br><br>
+    
+    <input type="text" id = "name" value="ITCAST"  onfocus="tolowercase()"  onblur="upcase()" >
+    <br><br>
+
+     
+    <input type="checkbox" name ="hobby"> 电影
+    <input type="checkbox" name ="hobby"> 旅游
+    <input type="checkbox" name ="hobby"> 游戏
+    <br>
+   <input type="button" value="全选"  onclick="on3()">
+    <input type="button" value="反选" onclick="on4()">
+
+</body>
+<script>
+    function on1(){
+       var img = document.getElementById("h1");
+       img.src ="https://i01piccdn.sogoucdn.com/44ec82a29c0eb20c";
+    }
+
+    function on2(){
+        var img = document.getElementById("h1");
+       img.src ="https://img-blog.csdnimg.cn/20191013125600919.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc0Mzc5OQ==,size_16,color_FFFFFF,t_70";
+    }
+  
+    // onblur="bfn()" onfocus="ffn()"
+    
+    
+
+      function tolowercase(){
+        var input = document.getElementById("name");
+        
+        input.value = input.value.toLowerCase();
+      }
+
+      function upcase(){
+       var input = document.getElementsByName("name");
+
+       input.value = input.value.toUpperCase();
+      }
+
+
+    function on3(){
+      var ins=  document.getElementsByName("hobby");
+      for (let i = 0; i < ins.length; i++) {
+        const element = ins[i];
+        element.checked=true;    
+      }
+    }
+
+
+    function on4(){
+      var ins=  document.getElementsByName("hobby");
+      for (let i = 0; i < ins.length; i++) {
+        const element = ins[i];
+        element.checked=false;    
+      }
+    }
+
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var url =location.href;
+			alert(url)
+			
+			var url2 =decodeURI(url);
+			alert(url2)
+			
+		//	alert(encodeURI(url2));
+			
+			function skip (){
+			location.href ="http://www.baidu.com";
+			}
+			setTimeout("skip()",2000);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

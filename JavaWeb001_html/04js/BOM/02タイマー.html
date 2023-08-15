@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var time= 10;
+			var id;
+			function timer(){
+				if(time == 10){
+				 alert("爆弾は十秒後で爆発、ご注意ください")	
+				}
+				alert(time) 
+				time--;
+				if(time < 0){
+					clearInterval(id)
+									}
+			}
+			
+			 id =setInterval("timer()",1000);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

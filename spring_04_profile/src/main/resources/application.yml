@@ -1,0 +1,31 @@
+#設定した
+spring:
+  profiles:
+    active: test
+---
+#開発
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+    port: 80
+
+---
+#生産
+
+spring:
+  config:
+    activate:
+      on-profile: pro
+server:
+  port: 81
+---
+#テスト
+
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 82
